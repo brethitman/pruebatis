@@ -1,0 +1,32 @@
+-- Insertar usuarios (1 admin y 2 estudiantes)
+INSERT INTO Usuario (username, password, role, email, telefono) VALUES
+('admin1', 'admin123', 'ADMIN', 'admin@example.com', '123456789'),
+('estudiante1', 'pass123', 'ESTUDIANTE', 'estudiante1@example.com', '987654321'),
+('estudiante2', 'pass456', 'ESTUDIANTE', 'estudiante2@example.com', '765432198');
+
+-- Insertar estudiantes (ligados a los usuarios estudiantes)
+INSERT INTO Estudiante (nombre, apellido, ci, fechaNacimiento, usuario_id) VALUES
+('Carlos', 'Perez', '12345678', '2002-05-10', 2),
+('María', 'González', '87654321', '2001-08-15', 3);
+
+-- Insertar tutores
+INSERT INTO Tutor (nombre, apellido, email, telefono) VALUES
+('Juan', 'Lopez', 'juan.lopez@example.com', '321654987'),
+('Ana', 'Martinez', 'ana.martinez@example.com', '159357246');
+
+-- Insertar áreas de competencia
+INSERT INTO AreaCompetencia (nombre, categoria, costo) VALUES
+('Matemáticas', 'Ciencias', 50.0),
+('Física', 'Ciencias', 60.0),
+('Programación', 'Tecnología', 70.0);
+
+-- Insertar inscripciones de estudiantes a áreas de competencia con tutores
+INSERT INTO Inscripcion (estudiante_id, areaCompetencia_id, tutor_id, comprobantePago, fechaInscripcion, estadoPago) VALUES
+(1, 1, 1, 'comprobante1.jpg', '2024-02-01', 'PAGADO'),
+(2, 2, 2, 'comprobante2.jpg', '2024-02-05', 'PENDIENTE');
+
+-- Insertar comprobantes de pago (solo para inscripciones pagadas)
+INSERT INTO ComprobantePago (numeroComprobante, nombrePagador, fechaPago, inscripcion_id) VALUES
+('CMP-001', 'Carlos Perez', '2024-02-01', 1);
+
+//base de datos 
