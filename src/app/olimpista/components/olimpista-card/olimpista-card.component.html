@@ -1,0 +1,61 @@
+<div class="olimpista__card">
+  <!-- Si quieres poner imágenes, pones src="" -->
+  <img
+    [alt]="OlimpistaElement.nombres"
+  >
+  <div class="p-2">
+    <h3 class="font-medium mb-4">Datos del Olimpista:</h3>
+    <!-- Contenedor para los datos del olimpista -->
+    <div class="border p-4 bg-gray-50 rounded-lg">
+      <h4 class="font-semibold text-xl mb-2 text-gray-700">Olimpista</h4>
+      <table class="min-w-full">
+        <tbody>
+          <tr>
+            <td class="px-4 py-2 text-sm text-gray-500">Nombre</td>
+            <td class="px-4 py-2 text-sm font-bold text-gray-800">{{OlimpistaElement.nombres}}</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-sm text-gray-500">Apellido</td>
+            <td class="px-4 py-2 text-sm font-bold text-gray-800">{{OlimpistaElement.apellidos}}</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-sm text-gray-500">Correo</td>
+            <td class="px-4 py-2 text-sm font-bold text-gray-800">{{OlimpistaElement.correo}}</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-sm text-gray-500">CI</td>
+            <td class="px-4 py-2 text-sm font-bold text-gray-800">{{OlimpistaElement.ci}}</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-sm text-gray-500">Fecha de Nacimiento</td>
+            <td class="px-4 py-2 text-sm font-bold text-gray-800">{{OlimpistaElement.fechaNacimiento}}</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-sm text-gray-500">Teléfono</td>
+            <td class="px-4 py-2 text-sm font-bold text-gray-800">{{OlimpistaElement.telefono}}</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-sm text-gray-500">Colegio</td>
+            <td class="px-4 py-2 text-sm font-bold text-gray-800">{{OlimpistaElement.colegio}}</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-sm text-gray-500">Curso</td>
+            <td class="px-4 py-2 text-sm font-bold text-gray-800">{{OlimpistaElement.curso}}</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-sm text-gray-500">Departamento</td>
+            <td class="px-4 py-2 text-sm font-bold text-gray-800">{{OlimpistaElement.departamento}}</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-sm text-gray-500">Provincia</td>
+            <td class="px-4 py-2 text-sm font-bold text-gray-800">{{OlimpistaElement.provincia}}</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-sm text-gray-500">Creado el</td>
+            <td class="px-4 py-2 text-sm font-bold text-gray-800">{{OlimpistaElement.createdAt}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

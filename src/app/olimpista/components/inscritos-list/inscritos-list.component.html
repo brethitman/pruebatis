@@ -1,0 +1,18 @@
+<section class="pt-8 pb-8">
+  <div class="container">
+      <ul class="olimpistas__list">
+
+      @for (InscripcionElement of InscripcionElement  ; track InscripcionElement.id) {
+
+            <app-inscritos-card    [InscripcionElement]="InscripcionElement"
+
+            ></app-inscritos-card>
+      }@empty {
+        <p class="text-center">No se encontraron resultados</p>
+      }
+
+     </ul>
+  </div>
+</section>
+
+
