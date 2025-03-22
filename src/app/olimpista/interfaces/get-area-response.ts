@@ -1,31 +1,21 @@
-import { AreaElement } from "./area .interface";
-
-export interface  GetAreaResponse  {
-  area:  AreaElement[];
+import { Area } from "./area.interface";
+export interface GetAreaResponse {
+  areas: Area[];
   links: Links;
   meta:  Meta;
 }
 
- interface Links {
+interface Links {
   first: string;
-  last:  string;
-  prev:  null;
-  next:  null;
+  last: null;
+  prev: null;
+  next: null;
 }
 
- interface Meta {
+interface Meta {
   current_page: number;
-  from:         number;
-  last_page:    number;
-  links:        Link[];
-  path:         string;
-  per_page:     number;
-  to:           number;
-  total:        number;
-}
-
- interface Link {
-  url:    null | string;
-  label:  string;
-  active: boolean;
+  from: number;
+  path: string;
+  per_page: number;
+  to: number;
 }

@@ -1,31 +1,21 @@
-import { TutorElement } from "./tutor.interface";
-
-export interface  GetTutorResponse {
-  tutor: TutorElement[];
-  links: Links;
-  meta:  Meta;
+import { Tutore } from './tutor.interface';
+export interface GetTutoresRespoce {
+  tutores: Tutore[];
+  links:   Links;
+  meta:    Meta;
 }
 
- interface Links {
+export interface Links {
   first: string;
-  last:  string;
+  last:  null;
   prev:  null;
   next:  null;
 }
 
- interface Meta {
+export interface Meta {
   current_page: number;
   from:         number;
-  last_page:    number;
-  links:        Link[];
   path:         string;
   per_page:     number;
   to:           number;
-  total:        number;
-}
-
- interface Link {
-  url:    null | string;
-  label:  string;
-  active: boolean;
 }

@@ -1,19 +1,18 @@
-import { ComprobantepagoElement } from "./comprobante.interface";
-export interface Comprobantepago {
-  comprobantepago: ComprobantepagoElement[];
-  links:           Links;
-  meta:            Meta;
+import { Datum } from "./comprobante.interface";
+export interface GetComprobanteRespose {
+  data:  Datum[];
+  links: Links;
+  meta:  Meta;
 }
 
-
- interface Links {
+export interface Links {
   first: string;
   last:  string;
   prev:  null;
   next:  null;
 }
 
- interface Meta {
+export interface Meta {
   current_page: number;
   from:         number;
   last_page:    number;
@@ -24,9 +23,8 @@ export interface Comprobantepago {
   total:        number;
 }
 
- interface Link {
+export interface Link {
   url:    null | string;
   label:  string;
   active: boolean;
 }
-

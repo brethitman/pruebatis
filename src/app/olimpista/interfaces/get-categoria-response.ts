@@ -1,13 +1,13 @@
-import { NivelCategoria } from "./categoria.interface";
-export interface GetCategoriaResponce {
-  nivelCategoria: NivelCategoria[];
-  links:          Links;
-  meta:           Meta;
+import { NivelesCategoria } from "./categoria.interface";
+export interface GetCategoriaResponse {
+  nivelesCategoria: NivelesCategoria[];
+  links:            Links;
+  meta:             Meta;
 }
 
  interface Links {
   first: string;
-  last:  string;
+  last:  null;
   prev:  null;
   next:  null;
 }
@@ -15,17 +15,10 @@ export interface GetCategoriaResponce {
  interface Meta {
   current_page: number;
   from:         number;
-  last_page:    number;
-  links:        Link[];
   path:         string;
   per_page:     number;
   to:           number;
-  total:        number;
 }
 
- interface Link {
-  url:    null | string;
-  label:  string;
-  active: boolean;
-}
+
 

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment.development';
 import { map, Observable } from 'rxjs';
-import { OlimpistaElement } from '../interfaces/olimpista-response';
+import {  Olimpista } from '../interfaces/olimpista-response';
 import { GetOlimpistaResponse } from '../interfaces/get-olimpista-response';
 
 @Injectable({
@@ -12,10 +12,10 @@ export class OlimpistaService {
 
   private http = inject(HttpClient);
 
-  public findAll(): Observable<OlimpistaElement[]> {
+  public findAll(): Observable<Olimpista[]> {
     return this.http.get<GetOlimpistaResponse>(`${environment.apiUrl}/olimpista`)
       .pipe(
-        map((resp) => resp.olimpista)
+        map((resp) => resp.olimpistas)
       );
   }
 }

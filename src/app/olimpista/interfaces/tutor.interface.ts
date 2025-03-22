@@ -1,5 +1,5 @@
 
-export interface TutorElement {
+export interface Tutore {
   id:        number;
   nombres:   string;
   apellidos: string;

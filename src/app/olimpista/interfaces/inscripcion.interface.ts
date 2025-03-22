@@ -1,35 +1,37 @@
-export interface InscripcionElement {
-  id:        number;
-  olimpista: Olimpista | null;
-  area:      Area;
-  tutor:     Tutor;
-  estado:    string;
-  createdAt: Date;
-  updatedAt: Date;
+
+export interface Inscripcione {
+  id:                number;
+  fecha_inscripcion: Date;
+  estado:            string;
+  olimpista:         Olimpista | null;
+  area:              Area;
+  tutor:             Tutor;
+  createdAt:         null;
+  updatedAt:         null;
 }
 
 export interface Area {
-  id:        number;
-  nombre:    string;
-  costo:     string;
-  createdAt: Date;
-  updatedAt: Date;
+  id:          number;
+  nombre_area: string;
+  costo: number;
+  createdAt:   Date;
+  updatedAt:   Date;
 }
 
 export interface Olimpista {
-  id:              number;
-  nombres:         string;
-  apellidos:       string;
-  ci:              string;
-  fechaNacimiento: Date;
-  correo:          string;
-  telefono:        string;
-  colegio:         string;
-  curso:           string;
-  departamento:    string;
-  provincia:       string;
-  createdAt:       Date;
-  updatedAt:       Date;
+  id:               number;
+  nombres:          string;
+  apellidos:        string;
+  ci:               string;
+  fecha_nacimiento: Date;
+  correo:           string;
+  telefono:         string;
+  colegio:          string;
+  curso:            string;
+  departamento:     string;
+  provincia:        string;
+  createdAt:        Date;
+  updatedAt:        Date;
 }
 
 export interface Tutor {
@@ -41,4 +43,29 @@ export interface Tutor {
   telefono:  string;
   createdAt: Date;
   updatedAt: Date;
+}
+
+
+
+/////////////////////////////
+
+export interface GetInscripcionResponse {
+  inscripciones: Inscripcione[];
+  links:         Links;
+  meta:          Meta;
+}
+
+export interface Links {
+  first: string;
+  last:  null;
+  prev:  null;
+  next:  null;
+}
+
+export interface Meta {
+  current_page: number;
+  from:         number;
+  path:         string;
+  per_page:     number;
+  to:           number;
 }

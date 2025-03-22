@@ -1,54 +1,39 @@
 
-export interface Boletapago {
-  id:            number;
-  numero_boleta: string;
-  monto:         string;
-  inscripcion:   Inscripcion;
-  createdAt:     Date;
-  updatedAt:     Date;
+export interface BoletasPago {
+  id:               number;
+  numero_boleta:    string;
+  monto:            string;
+  fecha_generacion: Date;
+  inscripcion:      Inscripcion;
+  createdAt:        Date;
+  updatedAt:        Date;
 }
 
 export interface Inscripcion {
-  id:        number;
-  olimpista: Olimpista;
-  area:      Area;
-  tutor:     Tutor;
-  estado:    string;
-  createdAt: Date;
-  updatedAt: Date;
+  id:                number;
+  fecha_inscripcion: Date;
+  estado:            string;
+  createdAt:         null;
+  updatedAt:         null;
+}///////////////////////
+export interface GetBoletaResponse {
+  boletasPago: BoletasPago[];
+  links:       Links;
+  meta:        Meta;
 }
 
-export interface Area {
-  id:        number;
-  nombre:    string;
-  costo:     string;
-  createdAt: Date;
-  updatedAt: Date;
+
+export interface Links {
+  first: string;
+  last:  null;
+  prev:  null;
+  next:  null;
 }
 
-export interface Olimpista {
-  id:              number;
-  nombres:         string;
-  apellidos:       string;
-  ci:              string;
-  fechaNacimiento: Date;
-  correo:          string;
-  telefono:        string;
-  colegio:         string;
-  curso:           string;
-  departamento:    string;
-  provincia:       string;
-  createdAt:       Date;
-  updatedAt:       Date;
-}
-
-export interface Tutor {
-  id:        number;
-  nombres:   string;
-  apellidos: string;
-  ci:        string;
-  correo:    string;
-  telefono:  string;
-  createdAt: Date;
-  updatedAt: Date;
+export interface Meta {
+  current_page: number;
+  from:         number;
+  path:         string;
+  per_page:     number;
+  to:           number;
 }

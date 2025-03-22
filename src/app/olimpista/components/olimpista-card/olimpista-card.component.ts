@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 
-import { OlimpistaElement } from '../../interfaces/olimpista-response';
+import { Olimpista } from '../../interfaces/olimpista-response';
+
 
 @Component({
   selector: 'app-olimpista-card',
@@ -12,5 +13,5 @@ import { OlimpistaElement } from '../../interfaces/olimpista-response';
 export class OlimpistaCardComponent {
 
   @Input({required:true})
-    OlimpistaElement!:OlimpistaElement;
+    Olimpista!:Olimpista;
 }

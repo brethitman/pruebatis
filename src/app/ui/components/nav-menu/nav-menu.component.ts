@@ -19,20 +19,22 @@ interface MenuOption{
 
 export class NavMenuComponent {
 
-  public readonly menuOptions: MenuOption[  ]= [
+  public readonly menuOptions: MenuOption[] = [
     {
       name: "REPORTES",
       path: "/admin/products"
     },
     {
-      name: "AREAS",
-      path: "/admin/categories"
+      name: "areas",
+      path: "/admin/areas" // Ruta para el componente AreasComponent
     },
     {
       name: "Registro",
       path: "/admin/sales"
     },
-  ]
+  ];
+
+
 
 }
 

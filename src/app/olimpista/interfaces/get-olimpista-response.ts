@@ -1,14 +1,13 @@
-import { OlimpistaElement } from "./olimpista-response";
-
+import { Olimpista } from "./olimpista-response";
 export interface GetOlimpistaResponse {
-  olimpista: OlimpistaElement[];
-  links:     Links;
-  meta:      Meta;
+  olimpistas: Olimpista[];
+  links:      Links;
+  meta:       Meta;
 }
 
  interface Links {
   first: string;
-  last:  string;
+  last:  null;
   prev:  null;
   next:  null;
 }
@@ -16,16 +15,7 @@ export interface GetOlimpistaResponse {
  interface Meta {
   current_page: number;
   from:         number;
-  last_page:    number;
-  links:        Link[];
   path:         string;
   per_page:     number;
   to:           number;
-  total:        number;
-}
-
- interface Link {
-  url:    null | string;
-  label:  string;
-  active: boolean;
 }

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { InscripcionElement } from '../../interfaces/inscripcion.interface';
+import { Inscripcione } from '../../interfaces/inscripcion.interface';
+import { GetInscripcionResponse } from '../../interfaces/get-inscripcion-response';
 
 @Component({
   selector: 'app-inscritos-card',
@@ -11,7 +12,7 @@ export class InscritosCardComponent {
 
 
     @Input({required:true})
-    InscripcionElement!:InscripcionElement;
+    Inscripcione!:Inscripcione;
 
 
 }
